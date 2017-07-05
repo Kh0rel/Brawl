@@ -13,6 +13,16 @@
 		74930EC41F0A59B20032DF47 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC31F0A59B20032DF47 /* nice_music.ogg */; };
 		74930EC61F0A59B20032DF47 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC51F0A59B20032DF47 /* sansation.ttf */; };
 		74930EC81F0A59B20032DF47 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC71F0A59B20032DF47 /* icon.png */; };
+		74D9A70A1F0BC77D00D369FE /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7081F0BC77D00D369FE /* Unit.cpp */; };
+		74D9A7111F0C13E400D369FE /* Soldier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A70F1F0C13E400D369FE /* Soldier.cpp */; };
+		74D9A7141F0C313500D369FE /* Archer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7121F0C313500D369FE /* Archer.cpp */; };
+		74D9A7171F0C34F700D369FE /* SoldierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7151F0C34F700D369FE /* SoldierFactory.cpp */; };
+		74D9A71A1F0D17F100D369FE /* Siege.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7181F0D17F100D369FE /* Siege.cpp */; };
+		74D9A7211F0D7FC000D369FE /* ArcherFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A71F1F0D7FC000D369FE /* ArcherFactory.cpp */; };
+		74D9A7241F0D80FB00D369FE /* SiegeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7221F0D80FB00D369FE /* SiegeFactory.cpp */; };
+		74D9A7281F0D828700D369FE /* IStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7261F0D828700D369FE /* IStrategy.cpp */; };
+		74D9A72B1F0D834F00D369FE /* MovementStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7291F0D834F00D369FE /* MovementStrategy.cpp */; };
+		74D9A72E1F0D853800D369FE /* AttackStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A72C1F0D853800D369FE /* AttackStrategy.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +35,27 @@
 		74930EC31F0A59B20032DF47 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		74930EC51F0A59B20032DF47 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		74930EC71F0A59B20032DF47 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		74D9A7081F0BC77D00D369FE /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Unit.cpp; sourceTree = "<group>"; };
+		74D9A7091F0BC77D00D369FE /* Unit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Unit.hpp; sourceTree = "<group>"; };
+		74D9A70D1F0BE16600D369FE /* AbstractUnitFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AbstractUnitFactory.hpp; sourceTree = "<group>"; };
+		74D9A70F1F0C13E400D369FE /* Soldier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Soldier.cpp; sourceTree = "<group>"; };
+		74D9A7101F0C13E400D369FE /* Soldier.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Soldier.hpp; sourceTree = "<group>"; };
+		74D9A7121F0C313500D369FE /* Archer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Archer.cpp; sourceTree = "<group>"; };
+		74D9A7131F0C313500D369FE /* Archer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Archer.hpp; sourceTree = "<group>"; };
+		74D9A7151F0C34F700D369FE /* SoldierFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoldierFactory.cpp; sourceTree = "<group>"; };
+		74D9A7161F0C34F700D369FE /* SoldierFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoldierFactory.hpp; sourceTree = "<group>"; };
+		74D9A7181F0D17F100D369FE /* Siege.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Siege.cpp; sourceTree = "<group>"; };
+		74D9A7191F0D17F100D369FE /* Siege.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Siege.hpp; sourceTree = "<group>"; };
+		74D9A71F1F0D7FC000D369FE /* ArcherFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArcherFactory.cpp; sourceTree = "<group>"; };
+		74D9A7201F0D7FC000D369FE /* ArcherFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArcherFactory.hpp; sourceTree = "<group>"; };
+		74D9A7221F0D80FB00D369FE /* SiegeFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SiegeFactory.cpp; sourceTree = "<group>"; };
+		74D9A7231F0D80FB00D369FE /* SiegeFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SiegeFactory.hpp; sourceTree = "<group>"; };
+		74D9A7261F0D828700D369FE /* IStrategy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IStrategy.cpp; sourceTree = "<group>"; };
+		74D9A7271F0D828700D369FE /* IStrategy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IStrategy.hpp; sourceTree = "<group>"; };
+		74D9A7291F0D834F00D369FE /* MovementStrategy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovementStrategy.cpp; sourceTree = "<group>"; };
+		74D9A72A1F0D834F00D369FE /* MovementStrategy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MovementStrategy.hpp; sourceTree = "<group>"; };
+		74D9A72C1F0D853800D369FE /* AttackStrategy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackStrategy.cpp; sourceTree = "<group>"; };
+		74D9A72D1F0D853800D369FE /* AttackStrategy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AttackStrategy.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +88,9 @@
 		74930EB81F0A59B20032DF47 /* Brawl */ = {
 			isa = PBXGroup;
 			children = (
+				74D9A7251F0D827300D369FE /* Strategy */,
+				74D9A71E1F0D7B6100D369FE /* Factory */,
+				74930ED21F0AA1390032DF47 /* Character */,
 				74930EBB1F0A59B20032DF47 /* ResourcePath.mm */,
 				74930EBD1F0A59B20032DF47 /* ResourcePath.hpp */,
 				74930EBE1F0A59B20032DF47 /* main.cpp */,
@@ -83,6 +117,48 @@
 				74930EC71F0A59B20032DF47 /* icon.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		74930ED21F0AA1390032DF47 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				74D9A7081F0BC77D00D369FE /* Unit.cpp */,
+				74D9A7091F0BC77D00D369FE /* Unit.hpp */,
+				74D9A70F1F0C13E400D369FE /* Soldier.cpp */,
+				74D9A7101F0C13E400D369FE /* Soldier.hpp */,
+				74D9A7121F0C313500D369FE /* Archer.cpp */,
+				74D9A7131F0C313500D369FE /* Archer.hpp */,
+				74D9A7181F0D17F100D369FE /* Siege.cpp */,
+				74D9A7191F0D17F100D369FE /* Siege.hpp */,
+			);
+			name = Character;
+			sourceTree = "<group>";
+		};
+		74D9A71E1F0D7B6100D369FE /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				74D9A70D1F0BE16600D369FE /* AbstractUnitFactory.hpp */,
+				74D9A7161F0C34F700D369FE /* SoldierFactory.hpp */,
+				74D9A7151F0C34F700D369FE /* SoldierFactory.cpp */,
+				74D9A71F1F0D7FC000D369FE /* ArcherFactory.cpp */,
+				74D9A7201F0D7FC000D369FE /* ArcherFactory.hpp */,
+				74D9A7221F0D80FB00D369FE /* SiegeFactory.cpp */,
+				74D9A7231F0D80FB00D369FE /* SiegeFactory.hpp */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		74D9A7251F0D827300D369FE /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				74D9A7261F0D828700D369FE /* IStrategy.cpp */,
+				74D9A7271F0D828700D369FE /* IStrategy.hpp */,
+				74D9A7291F0D834F00D369FE /* MovementStrategy.cpp */,
+				74D9A72A1F0D834F00D369FE /* MovementStrategy.hpp */,
+				74D9A72C1F0D853800D369FE /* AttackStrategy.cpp */,
+				74D9A72D1F0D853800D369FE /* AttackStrategy.hpp */,
+			);
+			name = Strategy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +250,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				74930EBF1F0A59B20032DF47 /* main.cpp in Sources */,
+				74D9A7241F0D80FB00D369FE /* SiegeFactory.cpp in Sources */,
+				74D9A72E1F0D853800D369FE /* AttackStrategy.cpp in Sources */,
+				74D9A7211F0D7FC000D369FE /* ArcherFactory.cpp in Sources */,
+				74D9A72B1F0D834F00D369FE /* MovementStrategy.cpp in Sources */,
+				74D9A70A1F0BC77D00D369FE /* Unit.cpp in Sources */,
 				74930EBC1F0A59B20032DF47 /* ResourcePath.mm in Sources */,
+				74D9A7141F0C313500D369FE /* Archer.cpp in Sources */,
+				74D9A7281F0D828700D369FE /* IStrategy.cpp in Sources */,
+				74D9A7111F0C13E400D369FE /* Soldier.cpp in Sources */,
+				74D9A7171F0C34F700D369FE /* SoldierFactory.cpp in Sources */,
+				74D9A71A1F0D17F100D369FE /* Siege.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +392,7 @@
 				74930ECD1F0A59B20032DF47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

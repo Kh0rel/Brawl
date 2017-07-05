@@ -16,12 +16,37 @@
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
+#include "SoldierFactory.hpp"
+#include "Soldier.hpp"
+#include <iostream>
+#include "ArcherFactory.hpp"
+#include "Archer.hpp"
+
+
 
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
 
 int main(int, char const**)
 {
+    
+    
+    
+    
+    Factory::SoldierFactory soldierSF;
+    Character::Unit* soldier = soldierSF.createUnit();
+    std::cout<<soldier->getHP()<<std::endl;
+    
+    Factory::ArcherFactory archerSF;
+    Character::Unit* archer = archerSF.createUnit();
+    std::cout<<archer->getHP()<<std::endl;
+    
+    
+    
+    
+    
+    
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
 
