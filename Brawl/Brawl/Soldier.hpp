@@ -32,7 +32,7 @@ namespace Character {
         const int ad = 5;
         const int range = 1;
         std::string player;
-        std::string name;
+        std::string name = "Soldier";
     };
 }
 #endif /* Soldier_hpp */

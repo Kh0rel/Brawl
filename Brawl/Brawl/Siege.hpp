@@ -31,7 +31,7 @@ private:
     int ad = 10;
     int range = 3;
     std::string player;
-    std::string name;
+    std::string name = "Siege";
 };
 }
 

@@ -21,6 +21,8 @@
 #include <iostream>
 #include "ArcherFactory.hpp"
 #include "Archer.hpp"
+#include "ArcherBuilding.hpp"
+#include "ArcherBuildingFactory.hpp"
 
 
 
@@ -30,6 +32,21 @@
 int main(int, char const**)
 {
     
+    
+    Factory::ArcherBuildingFactory soldierBSF;
+    Building::UnitBuilding* soldierB = soldierBSF.createBuilding();
+    std::cout<<soldierB->getSpeed()<<std::endl;
+    
+    soldierB->setState(soldierB->getSpeed());
+    while (soldierB->getState() != 0) {
+        if (soldierB->getState() == 1) {
+            Character::Unit* soldier = soldierB->createUnit();
+            std::cout<<soldier->getName()<<std::endl;
+        }else{
+            std::cout<<"Creating Archer"<<std::endl;
+        }
+        soldierB->setState(soldierB->getState() - 1);
+    }
     
     
     

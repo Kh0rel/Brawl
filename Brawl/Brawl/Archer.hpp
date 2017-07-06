@@ -32,7 +32,7 @@ private:
     int ad = 10;
     int range = 2;
     std::string player;
-    std::string name;
+    std::string name = "Archer";
 };
 }
 #endif /* Archer_hpp */
