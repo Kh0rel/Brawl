@@ -16,118 +16,125 @@
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
-#include "SoldierFactory.hpp"
-#include "Soldier.hpp"
-#include <iostream>
-#include "ArcherFactory.hpp"
-#include "Archer.hpp"
-#include "ArcherBuilding.hpp"
-#include "ArcherBuildingFactory.hpp"
-
-
 
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
+#include "Animation.hpp"
+#include "AnimatedSprite.hpp"
+#include <iostream>
 
 int main(int, char const**)
 {
+    // setup window
+    sf::Vector2i screenDimensions(800,600);
+    sf::RenderWindow window(sf::VideoMode(screenDimensions.x, screenDimensions.y), "Animations!");
+    window.setFramerateLimit(60);
     
-    
-    Factory::ArcherBuildingFactory soldierBSF;
-    Building::UnitBuilding* soldierB = soldierBSF.createBuilding();
-    std::cout<<soldierB->getSpeed()<<std::endl;
-    
-    soldierB->setState(soldierB->getSpeed());
-    while (soldierB->getState() != 0) {
-        if (soldierB->getState() == 1) {
-            Character::Unit* soldier = soldierB->createUnit();
-            std::cout<<soldier->getName()<<std::endl;
-        }else{
-            std::cout<<"Creating Archer"<<std::endl;
-        }
-        soldierB->setState(soldierB->getState() - 1);
-    }
-    
-    
-    
-    Factory::SoldierFactory soldierSF;
-    Character::Unit* soldier = soldierSF.createUnit();
-    std::cout<<soldier->getHP()<<std::endl;
-    
-    Factory::ArcherFactory archerSF;
-    Character::Unit* archer = archerSF.createUnit();
-    std::cout<<archer->getHP()<<std::endl;
-    
-    
-    
-    
-    
-    
-    
-    // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
-
-    // Set the Icon
-    sf::Image icon;
-    if (!icon.loadFromFile(resourcePath() + "icon.png")) {
-        return EXIT_FAILURE;
-    }
-    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
-
-    // Load a sprite to display
+    // load texture (spritesheet)
     sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "cute_image.jpg")) {
-        return EXIT_FAILURE;
+    if (!texture.loadFromFile("/Users/Vincent/Documents/Pro/Cours/C++/project/Brawl/Brawl/Brawl/player.png"))
+    {
+        std::cout << "Failed to load player spritesheet!" << std::endl;
+        return 1;
     }
-    sf::Sprite sprite(texture);
-
-    // Create a graphical text to display
-    sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
-        return EXIT_FAILURE;
-    }
-    sf::Text text("Hello SFML", font, 50);
-    text.setFillColor(sf::Color::Black);
-
-    // Load a music to play
-    sf::Music music;
-    if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
-        return EXIT_FAILURE;
-    }
-
-    // Play the music
-    music.play();
-
-    // Start the game loop
+    
+    // set up the animations for all four directions (set spritesheet and push frames)
+    Animation walkingAnimationDown;
+    walkingAnimationDown.setSpriteSheet(texture);
+    walkingAnimationDown.addFrame(sf::IntRect(32, 0, 32, 32));
+    walkingAnimationDown.addFrame(sf::IntRect(64, 0, 32, 32));
+    walkingAnimationDown.addFrame(sf::IntRect(32, 0, 32, 32));
+    walkingAnimationDown.addFrame(sf::IntRect( 0, 0, 32, 32));
+    
+    Animation walkingAnimationLeft;
+    walkingAnimationLeft.setSpriteSheet(texture);
+    walkingAnimationLeft.addFrame(sf::IntRect(32, 32, 32, 32));
+    walkingAnimationLeft.addFrame(sf::IntRect(64, 32, 32, 32));
+    walkingAnimationLeft.addFrame(sf::IntRect(32, 32, 32, 32));
+    walkingAnimationLeft.addFrame(sf::IntRect( 0, 32, 32, 32));
+    
+    Animation walkingAnimationRight;
+    walkingAnimationRight.setSpriteSheet(texture);
+    walkingAnimationRight.addFrame(sf::IntRect(32, 64, 32, 32));
+    walkingAnimationRight.addFrame(sf::IntRect(64, 64, 32, 32));
+    walkingAnimationRight.addFrame(sf::IntRect(32, 64, 32, 32));
+    walkingAnimationRight.addFrame(sf::IntRect( 0, 64, 32, 32));
+    
+    Animation walkingAnimationUp;
+    walkingAnimationUp.setSpriteSheet(texture);
+    walkingAnimationUp.addFrame(sf::IntRect(32, 96, 32, 32));
+    walkingAnimationUp.addFrame(sf::IntRect(64, 96, 32, 32));
+    walkingAnimationUp.addFrame(sf::IntRect(32, 96, 32, 32));
+    walkingAnimationUp.addFrame(sf::IntRect( 0, 96, 32, 32));
+    
+    Animation* currentAnimation = &walkingAnimationDown;
+    
+    // set up AnimatedSprite
+    AnimatedSprite animatedSprite(sf::seconds(0.2), true, false);
+    animatedSprite.setPosition(sf::Vector2f(screenDimensions / 2));
+    
+    sf::Clock frameClock;
+    
+    float speed = 80.f;
+    bool noKeyWasPressed = true;
+    
     while (window.isOpen())
     {
-        // Process events
         sf::Event event;
         while (window.pollEvent(event))
         {
-            // Close window: exit
-            if (event.type == sf::Event::Closed) {
+            if (event.type == sf::Event::Closed)
                 window.close();
-            }
-
-            // Escape pressed: exit
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
                 window.close();
-            }
         }
-
-        // Clear screen
+        
+        sf::Time frameTime = frameClock.restart();
+        
+        // if a key was pressed set the correct animation and move correctly
+        sf::Vector2f movement(0.f, 0.f);
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+        {
+            currentAnimation = &walkingAnimationUp;
+            movement.y -= speed;
+            noKeyWasPressed = false;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+        {
+            currentAnimation = &walkingAnimationDown;
+            movement.y += speed;
+            noKeyWasPressed = false;
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+        {
+            currentAnimation = &walkingAnimationLeft;
+            movement.x -= speed;
+            noKeyWasPressed = false;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+        {
+            currentAnimation = &walkingAnimationRight;
+            movement.x += speed;
+            noKeyWasPressed = false;
+        }
+        animatedSprite.play(*currentAnimation);
+        animatedSprite.move(movement * frameTime.asSeconds());
+        
+        // if no key was pressed stop the animation
+        if (noKeyWasPressed)
+        {
+            animatedSprite.stop();
+        }
+        noKeyWasPressed = true;
+        
+        // update AnimatedSprite
+        animatedSprite.update(frameTime);
+        
+        // draw
         window.clear();
-
-        // Draw the sprite
-        window.draw(sprite);
-
-        // Draw the string
-        window.draw(text);
-
-        // Update the window
+        window.draw(animatedSprite);
         window.display();
     }
-
-    return EXIT_SUCCESS;
+    
+    return 0;
 }
