@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74930EBC1F0A59B20032DF47 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74930EBB1F0A59B20032DF47 /* ResourcePath.mm */; };
+		74930EBF1F0A59B20032DF47 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74930EBE1F0A59B20032DF47 /* main.cpp */; };
+		74930EC21F0A59B20032DF47 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC11F0A59B20032DF47 /* cute_image.jpg */; };
+		74930EC41F0A59B20032DF47 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC31F0A59B20032DF47 /* nice_music.ogg */; };
+		74930EC61F0A59B20032DF47 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC51F0A59B20032DF47 /* sansation.ttf */; };
+		74930EC81F0A59B20032DF47 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC71F0A59B20032DF47 /* icon.png */; };
+		74D9A70A1F0BC77D00D369FE /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7081F0BC77D00D369FE /* Unit.cpp */; };
+		74D9A7111F0C13E400D369FE /* Soldier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A70F1F0C13E400D369FE /* Soldier.cpp */; };
+		74D9A7141F0C313500D369FE /* Archer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7121F0C313500D369FE /* Archer.cpp */; };
+		74D9A7171F0C34F700D369FE /* SoldierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7151F0C34F700D369FE /* SoldierFactory.cpp */; };
+		74D9A71A1F0D17F100D369FE /* Siege.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7181F0D17F100D369FE /* Siege.cpp */; };
+		74D9A7211F0D7FC000D369FE /* ArcherFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A71F1F0D7FC000D369FE /* ArcherFactory.cpp */; };
+		74D9A7241F0D80FB00D369FE /* SiegeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7221F0D80FB00D369FE /* SiegeFactory.cpp */; };
+		74D9A7281F0D828700D369FE /* IStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7261F0D828700D369FE /* IStrategy.cpp */; };
+		74D9A72B1F0D834F00D369FE /* MovementStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7291F0D834F00D369FE /* MovementStrategy.cpp */; };
+		74D9A72E1F0D853800D369FE /* AttackStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A72C1F0D853800D369FE /* AttackStrategy.cpp */; };
+		74D9A7351F0E747400D369FE /* UnitBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7331F0E747400D369FE /* UnitBuilding.cpp */; };
+		74D9A7381F0E840400D369FE /* SoldierBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7361F0E840400D369FE /* SoldierBuilding.cpp */; };
+		74D9A73B1F0E944200D369FE /* ArcherBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7391F0E944200D369FE /* ArcherBuilding.cpp */; };
+		74D9A73E1F0E94E500D369FE /* SiegeBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A73C1F0E94E500D369FE /* SiegeBuilding.cpp */; };
+		74D9A7411F0E958900D369FE /* SoldierBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A73F1F0E958900D369FE /* SoldierBuildingFactory.cpp */; };
+		74D9A7441F0E960E00D369FE /* ArcherBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7421F0E960E00D369FE /* ArcherBuildingFactory.cpp */; };
+		74D9A7471F0E962C00D369FE /* SiegeBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7451F0E962C00D369FE /* SiegeBuildingFactory.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		74930EB61F0A59B20032DF47 /* Brawl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brawl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74930EBA1F0A59B20032DF47 /* Brawl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Brawl-Info.plist"; sourceTree = "<group>"; };
+		74930EBB1F0A59B20032DF47 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		74930EBD1F0A59B20032DF47 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		74930EBE1F0A59B20032DF47 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		74930EC11F0A59B20032DF47 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
+		74930EC31F0A59B20032DF47 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
+		74930EC51F0A59B20032DF47 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
+		74930EC71F0A59B20032DF47 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		74D9A7081F0BC77D00D369FE /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Unit.cpp; sourceTree = "<group>"; };
+		74D9A7091F0BC77D00D369FE /* Unit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Unit.hpp; sourceTree = "<group>"; };
+		74D9A70D1F0BE16600D369FE /* AbstractUnitFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AbstractUnitFactory.hpp; sourceTree = "<group>"; };
+		74D9A70F1F0C13E400D369FE /* Soldier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Soldier.cpp; sourceTree = "<group>"; };
+		74D9A7101F0C13E400D369FE /* Soldier.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Soldier.hpp; sourceTree = "<group>"; };
+		74D9A7121F0C313500D369FE /* Archer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Archer.cpp; sourceTree = "<group>"; };
+		74D9A7131F0C313500D369FE /* Archer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Archer.hpp; sourceTree = "<group>"; };
+		74D9A7151F0C34F700D369FE /* SoldierFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoldierFactory.cpp; sourceTree = "<group>"; };
+		74D9A7161F0C34F700D369FE /* SoldierFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoldierFactory.hpp; sourceTree = "<group>"; };
+		74D9A7181F0D17F100D369FE /* Siege.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Siege.cpp; sourceTree = "<group>"; };
+		74D9A7191F0D17F100D369FE /* Siege.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Siege.hpp; sourceTree = "<group>"; };
+		74D9A71F1F0D7FC000D369FE /* ArcherFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArcherFactory.cpp; sourceTree = "<group>"; };
+		74D9A7201F0D7FC000D369FE /* ArcherFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArcherFactory.hpp; sourceTree = "<group>"; };
+		74D9A7221F0D80FB00D369FE /* SiegeFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SiegeFactory.cpp; sourceTree = "<group>"; };
+		74D9A7231F0D80FB00D369FE /* SiegeFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SiegeFactory.hpp; sourceTree = "<group>"; };
+		74D9A7261F0D828700D369FE /* IStrategy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IStrategy.cpp; sourceTree = "<group>"; };
+		74D9A7271F0D828700D369FE /* IStrategy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IStrategy.hpp; sourceTree = "<group>"; };
+		74D9A7291F0D834F00D369FE /* MovementStrategy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovementStrategy.cpp; sourceTree = "<group>"; };
+		74D9A72A1F0D834F00D369FE /* MovementStrategy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MovementStrategy.hpp; sourceTree = "<group>"; };
+		74D9A72C1F0D853800D369FE /* AttackStrategy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackStrategy.cpp; sourceTree = "<group>"; };
+		74D9A72D1F0D853800D369FE /* AttackStrategy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AttackStrategy.hpp; sourceTree = "<group>"; };
+		74D9A7301F0E73AF00D369FE /* AbstractBuildingFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AbstractBuildingFactory.hpp; sourceTree = "<group>"; };
+		74D9A7331F0E747400D369FE /* UnitBuilding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnitBuilding.cpp; sourceTree = "<group>"; };
+		74D9A7341F0E747400D369FE /* UnitBuilding.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UnitBuilding.hpp; sourceTree = "<group>"; };
+		74D9A7361F0E840400D369FE /* SoldierBuilding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoldierBuilding.cpp; sourceTree = "<group>"; };
+		74D9A7371F0E840400D369FE /* SoldierBuilding.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoldierBuilding.hpp; sourceTree = "<group>"; };
+		74D9A7391F0E944200D369FE /* ArcherBuilding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArcherBuilding.cpp; sourceTree = "<group>"; };
+		74D9A73A1F0E944200D369FE /* ArcherBuilding.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArcherBuilding.hpp; sourceTree = "<group>"; };
+		74D9A73C1F0E94E500D369FE /* SiegeBuilding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SiegeBuilding.cpp; sourceTree = "<group>"; };
+		74D9A73D1F0E94E500D369FE /* SiegeBuilding.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SiegeBuilding.hpp; sourceTree = "<group>"; };
+		74D9A73F1F0E958900D369FE /* SoldierBuildingFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoldierBuildingFactory.cpp; sourceTree = "<group>"; };
+		74D9A7401F0E958900D369FE /* SoldierBuildingFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoldierBuildingFactory.hpp; sourceTree = "<group>"; };
+		74D9A7421F0E960E00D369FE /* ArcherBuildingFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArcherBuildingFactory.cpp; sourceTree = "<group>"; };
+		74D9A7431F0E960E00D369FE /* ArcherBuildingFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArcherBuildingFactory.hpp; sourceTree = "<group>"; };
+		74D9A7451F0E962C00D369FE /* SiegeBuildingFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SiegeBuildingFactory.cpp; sourceTree = "<group>"; };
+		74D9A7461F0E962C00D369FE /* SiegeBuildingFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SiegeBuildingFactory.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74930EB21F0A59B20032DF47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74930EAC1F0A59B20032DF47 = {
+			isa = PBXGroup;
+			children = (
+				74930EB81F0A59B20032DF47 /* Brawl */,
+				74930EB71F0A59B20032DF47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74930EB71F0A59B20032DF47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74930EB61F0A59B20032DF47 /* Brawl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74930EB81F0A59B20032DF47 /* Brawl */ = {
+			isa = PBXGroup;
+			children = (
+				74D9A7321F0E745000D369FE /* Building */,
+				74D9A7251F0D827300D369FE /* Strategy */,
+				74D9A71E1F0D7B6100D369FE /* Factory */,
+				74930ED21F0AA1390032DF47 /* Character */,
+				74930EBB1F0A59B20032DF47 /* ResourcePath.mm */,
+				74930EBD1F0A59B20032DF47 /* ResourcePath.hpp */,
+				74930EBE1F0A59B20032DF47 /* main.cpp */,
+				74930EC01F0A59B20032DF47 /* Resources */,
+				74930EB91F0A59B20032DF47 /* Supporting Files */,
+			);
+			path = Brawl;
+			sourceTree = "<group>";
+		};
+		74930EB91F0A59B20032DF47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74930EBA1F0A59B20032DF47 /* Brawl-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74930EC01F0A59B20032DF47 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74930EC11F0A59B20032DF47 /* cute_image.jpg */,
+				74930EC31F0A59B20032DF47 /* nice_music.ogg */,
+				74930EC51F0A59B20032DF47 /* sansation.ttf */,
+				74930EC71F0A59B20032DF47 /* icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		74930ED21F0AA1390032DF47 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				74D9A7081F0BC77D00D369FE /* Unit.cpp */,
+				74D9A7091F0BC77D00D369FE /* Unit.hpp */,
+				74D9A70F1F0C13E400D369FE /* Soldier.cpp */,
+				74D9A7101F0C13E400D369FE /* Soldier.hpp */,
+				74D9A7121F0C313500D369FE /* Archer.cpp */,
+				74D9A7131F0C313500D369FE /* Archer.hpp */,
+				74D9A7181F0D17F100D369FE /* Siege.cpp */,
+				74D9A7191F0D17F100D369FE /* Siege.hpp */,
+			);
+			name = Character;
+			sourceTree = "<group>";
+		};
+		74D9A71E1F0D7B6100D369FE /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				74D9A70D1F0BE16600D369FE /* AbstractUnitFactory.hpp */,
+				74D9A7161F0C34F700D369FE /* SoldierFactory.hpp */,
+				74D9A7151F0C34F700D369FE /* SoldierFactory.cpp */,
+				74D9A71F1F0D7FC000D369FE /* ArcherFactory.cpp */,
+				74D9A7201F0D7FC000D369FE /* ArcherFactory.hpp */,
+				74D9A7221F0D80FB00D369FE /* SiegeFactory.cpp */,
+				74D9A7231F0D80FB00D369FE /* SiegeFactory.hpp */,
+				74D9A7301F0E73AF00D369FE /* AbstractBuildingFactory.hpp */,
+				74D9A73F1F0E958900D369FE /* SoldierBuildingFactory.cpp */,
+				74D9A7401F0E958900D369FE /* SoldierBuildingFactory.hpp */,
+				74D9A7421F0E960E00D369FE /* ArcherBuildingFactory.cpp */,
+				74D9A7431F0E960E00D369FE /* ArcherBuildingFactory.hpp */,
+				74D9A7451F0E962C00D369FE /* SiegeBuildingFactory.cpp */,
+				74D9A7461F0E962C00D369FE /* SiegeBuildingFactory.hpp */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		74D9A7251F0D827300D369FE /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				74D9A7261F0D828700D369FE /* IStrategy.cpp */,
+				74D9A7271F0D828700D369FE /* IStrategy.hpp */,
+				74D9A7291F0D834F00D369FE /* MovementStrategy.cpp */,
+				74D9A72A1F0D834F00D369FE /* MovementStrategy.hpp */,
+				74D9A72C1F0D853800D369FE /* AttackStrategy.cpp */,
+				74D9A72D1F0D853800D369FE /* AttackStrategy.hpp */,
+			);
+			name = Strategy;
+			sourceTree = "<group>";
+		};
+		74D9A7321F0E745000D369FE /* Building */ = {
+			isa = PBXGroup;
+			children = (
+				74D9A7331F0E747400D369FE /* UnitBuilding.cpp */,
+				74D9A7341F0E747400D369FE /* UnitBuilding.hpp */,
+				74D9A7361F0E840400D369FE /* SoldierBuilding.cpp */,
+				74D9A7371F0E840400D369FE /* SoldierBuilding.hpp */,
+				74D9A7391F0E944200D369FE /* ArcherBuilding.cpp */,
+				74D9A73A1F0E944200D369FE /* ArcherBuilding.hpp */,
+				74D9A73C1F0E94E500D369FE /* SiegeBuilding.cpp */,
+				74D9A73D1F0E94E500D369FE /* SiegeBuilding.hpp */,
+			);
+			name = Building;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74930EB51F0A59B20032DF47 /* Brawl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74930ECB1F0A59B20032DF47 /* Build configuration list for PBXNativeTarget "Brawl" */;
+			buildPhases = (
+				74930EB11F0A59B20032DF47 /* Sources */,
+				74930EB21F0A59B20032DF47 /* Frameworks */,
+				74930EB31F0A59B20032DF47 /* Resources */,
+				74930EB41F0A59B20032DF47 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brawl;
+			productName = Brawl;
+			productReference = 74930EB61F0A59B20032DF47 /* Brawl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74930EAD1F0A59B20032DF47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Meryl Barantal";
+				TargetAttributes = {
+					74930EB51F0A59B20032DF47 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 74930EB01F0A59B20032DF47 /* Build configuration list for PBXProject "Brawl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74930EAC1F0A59B20032DF47;
+			productRefGroup = 74930EB71F0A59B20032DF47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74930EB51F0A59B20032DF47 /* Brawl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74930EB31F0A59B20032DF47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74930EC81F0A59B20032DF47 /* icon.png in Resources */,
+				74930EC61F0A59B20032DF47 /* sansation.ttf in Resources */,
+				74930EC41F0A59B20032DF47 /* nice_music.ogg in Resources */,
+				74930EC21F0A59B20032DF47 /* cute_image.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74930EB41F0A59B20032DF47 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/usr/local/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$CMAKE_INSTALL_FRAMEWORK_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$CMAKE_INSTALL_FRAMEWORK_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74930EB11F0A59B20032DF47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74930EBF1F0A59B20032DF47 /* main.cpp in Sources */,
+				74D9A7241F0D80FB00D369FE /* SiegeFactory.cpp in Sources */,
+				74D9A72E1F0D853800D369FE /* AttackStrategy.cpp in Sources */,
+				74D9A7211F0D7FC000D369FE /* ArcherFactory.cpp in Sources */,
+				74D9A72B1F0D834F00D369FE /* MovementStrategy.cpp in Sources */,
+				74D9A70A1F0BC77D00D369FE /* Unit.cpp in Sources */,
+				74D9A7411F0E958900D369FE /* SoldierBuildingFactory.cpp in Sources */,
+				74D9A7441F0E960E00D369FE /* ArcherBuildingFactory.cpp in Sources */,
+				74930EBC1F0A59B20032DF47 /* ResourcePath.mm in Sources */,
+				74D9A7141F0C313500D369FE /* Archer.cpp in Sources */,
+				74D9A7381F0E840400D369FE /* SoldierBuilding.cpp in Sources */,
+				74D9A73B1F0E944200D369FE /* ArcherBuilding.cpp in Sources */,
+				74D9A7351F0E747400D369FE /* UnitBuilding.cpp in Sources */,
+				74D9A7281F0D828700D369FE /* IStrategy.cpp in Sources */,
+				74D9A7111F0C13E400D369FE /* Soldier.cpp in Sources */,
+				74D9A73E1F0E94E500D369FE /* SiegeBuilding.cpp in Sources */,
+				74D9A7471F0E962C00D369FE /* SiegeBuildingFactory.cpp in Sources */,
+				74D9A7171F0C34F700D369FE /* SoldierFactory.cpp in Sources */,
+				74D9A71A1F0D17F100D369FE /* Siege.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		74930EC91F0A59B20032DF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		74930ECA1F0A59B20032DF47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		74930ECC1F0A59B20032DF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Brawl/Brawl-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74930ECD1F0A59B20032DF47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Brawl/Brawl-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74930EB01F0A59B20032DF47 /* Build configuration list for PBXProject "Brawl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74930EC91F0A59B20032DF47 /* Debug */,
+				74930ECA1F0A59B20032DF47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74930ECB1F0A59B20032DF47 /* Build configuration list for PBXNativeTarget "Brawl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74930ECC1F0A59B20032DF47 /* Debug */,
+				74930ECD1F0A59B20032DF47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74930EAD1F0A59B20032DF47 /* Project object */;
+}
