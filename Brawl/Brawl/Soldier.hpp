@@ -9,7 +9,6 @@
 #ifndef Soldier_hpp
 #define Soldier_hpp
 
-#include <stdio.h>
 #include "Unit.hpp"
 
 

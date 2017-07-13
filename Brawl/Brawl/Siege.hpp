@@ -9,7 +9,6 @@
 #ifndef Siege_hpp
 #define Siege_hpp
 
-#include <stdio.h>
 #include "Unit.hpp"
 
 namespace Character {

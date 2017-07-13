@@ -9,11 +9,9 @@
 #ifndef Archer_hpp
 #define Archer_hpp
 
-#include <stdio.h>
 #include "Unit.hpp"
 
 namespace Character {
-
 class Archer : public Unit {
 public:
     int getMaxHealth();

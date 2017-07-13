@@ -7,29 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74930EBC1F0A59B20032DF47 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74930EBB1F0A59B20032DF47 /* ResourcePath.mm */; };
-		74930EBF1F0A59B20032DF47 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74930EBE1F0A59B20032DF47 /* main.cpp */; };
+		74930EBC1F0A59B20032DF47 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74930EBB1F0A59B20032DF47 /* ResourcePath.mm */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74930EBF1F0A59B20032DF47 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74930EBE1F0A59B20032DF47 /* main.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
 		74930EC21F0A59B20032DF47 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC11F0A59B20032DF47 /* cute_image.jpg */; };
 		74930EC41F0A59B20032DF47 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC31F0A59B20032DF47 /* nice_music.ogg */; };
 		74930EC61F0A59B20032DF47 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC51F0A59B20032DF47 /* sansation.ttf */; };
 		74930EC81F0A59B20032DF47 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74930EC71F0A59B20032DF47 /* icon.png */; };
-		74D9A70A1F0BC77D00D369FE /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7081F0BC77D00D369FE /* Unit.cpp */; };
-		74D9A7111F0C13E400D369FE /* Soldier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A70F1F0C13E400D369FE /* Soldier.cpp */; };
-		74D9A7141F0C313500D369FE /* Archer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7121F0C313500D369FE /* Archer.cpp */; };
-		74D9A7171F0C34F700D369FE /* SoldierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7151F0C34F700D369FE /* SoldierFactory.cpp */; };
-		74D9A71A1F0D17F100D369FE /* Siege.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7181F0D17F100D369FE /* Siege.cpp */; };
-		74D9A7211F0D7FC000D369FE /* ArcherFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A71F1F0D7FC000D369FE /* ArcherFactory.cpp */; };
-		74D9A7241F0D80FB00D369FE /* SiegeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7221F0D80FB00D369FE /* SiegeFactory.cpp */; };
-		74D9A7281F0D828700D369FE /* IStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7261F0D828700D369FE /* IStrategy.cpp */; };
-		74D9A72B1F0D834F00D369FE /* MovementStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7291F0D834F00D369FE /* MovementStrategy.cpp */; };
-		74D9A72E1F0D853800D369FE /* AttackStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A72C1F0D853800D369FE /* AttackStrategy.cpp */; };
-		74D9A7351F0E747400D369FE /* UnitBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7331F0E747400D369FE /* UnitBuilding.cpp */; };
-		74D9A7381F0E840400D369FE /* SoldierBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7361F0E840400D369FE /* SoldierBuilding.cpp */; };
-		74D9A73B1F0E944200D369FE /* ArcherBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7391F0E944200D369FE /* ArcherBuilding.cpp */; };
-		74D9A73E1F0E94E500D369FE /* SiegeBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A73C1F0E94E500D369FE /* SiegeBuilding.cpp */; };
-		74D9A7411F0E958900D369FE /* SoldierBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A73F1F0E958900D369FE /* SoldierBuildingFactory.cpp */; };
-		74D9A7441F0E960E00D369FE /* ArcherBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7421F0E960E00D369FE /* ArcherBuildingFactory.cpp */; };
-		74D9A7471F0E962C00D369FE /* SiegeBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7451F0E962C00D369FE /* SiegeBuildingFactory.cpp */; };
+		74D9A70A1F0BC77D00D369FE /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7081F0BC77D00D369FE /* Unit.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7111F0C13E400D369FE /* Soldier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A70F1F0C13E400D369FE /* Soldier.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7141F0C313500D369FE /* Archer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7121F0C313500D369FE /* Archer.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7171F0C34F700D369FE /* SoldierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7151F0C34F700D369FE /* SoldierFactory.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A71A1F0D17F100D369FE /* Siege.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7181F0D17F100D369FE /* Siege.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7211F0D7FC000D369FE /* ArcherFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A71F1F0D7FC000D369FE /* ArcherFactory.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7241F0D80FB00D369FE /* SiegeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7221F0D80FB00D369FE /* SiegeFactory.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7281F0D828700D369FE /* IStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7261F0D828700D369FE /* IStrategy.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A72B1F0D834F00D369FE /* MovementStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7291F0D834F00D369FE /* MovementStrategy.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A72E1F0D853800D369FE /* AttackStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A72C1F0D853800D369FE /* AttackStrategy.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7351F0E747400D369FE /* UnitBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7331F0E747400D369FE /* UnitBuilding.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7381F0E840400D369FE /* SoldierBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7361F0E840400D369FE /* SoldierBuilding.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A73B1F0E944200D369FE /* ArcherBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7391F0E944200D369FE /* ArcherBuilding.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A73E1F0E94E500D369FE /* SiegeBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A73C1F0E94E500D369FE /* SiegeBuilding.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7411F0E958900D369FE /* SoldierBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A73F1F0E958900D369FE /* SoldierBuildingFactory.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7441F0E960E00D369FE /* ArcherBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7421F0E960E00D369FE /* ArcherBuildingFactory.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		74D9A7471F0E962C00D369FE /* SiegeBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7451F0E962C00D369FE /* SiegeBuildingFactory.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		BF6067381F162A0700935E17 /* AnimatedSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF6067341F162A0700935E17 /* AnimatedSprite.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		BF6067391F162A0700935E17 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF6067361F162A0700935E17 /* Animation.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,10 @@
 		74D9A7431F0E960E00D369FE /* ArcherBuildingFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArcherBuildingFactory.hpp; sourceTree = "<group>"; };
 		74D9A7451F0E962C00D369FE /* SiegeBuildingFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SiegeBuildingFactory.cpp; sourceTree = "<group>"; };
 		74D9A7461F0E962C00D369FE /* SiegeBuildingFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SiegeBuildingFactory.hpp; sourceTree = "<group>"; };
+		BF6067341F162A0700935E17 /* AnimatedSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimatedSprite.cpp; sourceTree = "<group>"; };
+		BF6067351F162A0700935E17 /* AnimatedSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimatedSprite.hpp; sourceTree = "<group>"; };
+		BF6067361F162A0700935E17 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		BF6067371F162A0700935E17 /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 		74930EB81F0A59B20032DF47 /* Brawl */ = {
 			isa = PBXGroup;
 			children = (
+				BF6067401F162A5E00935E17 /* Animation */,
 				74D9A7321F0E745000D369FE /* Building */,
 				74D9A7251F0D827300D369FE /* Strategy */,
 				74D9A71E1F0D7B6100D369FE /* Factory */,
@@ -204,6 +211,17 @@
 				74D9A73D1F0E94E500D369FE /* SiegeBuilding.hpp */,
 			);
 			name = Building;
+			sourceTree = "<group>";
+		};
+		BF6067401F162A5E00935E17 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				BF6067341F162A0700935E17 /* AnimatedSprite.cpp */,
+				BF6067351F162A0700935E17 /* AnimatedSprite.hpp */,
+				BF6067361F162A0700935E17 /* Animation.cpp */,
+				BF6067371F162A0700935E17 /* Animation.hpp */,
+			);
+			name = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +329,8 @@
 				74D9A7111F0C13E400D369FE /* Soldier.cpp in Sources */,
 				74D9A73E1F0E94E500D369FE /* SiegeBuilding.cpp in Sources */,
 				74D9A7471F0E962C00D369FE /* SiegeBuildingFactory.cpp in Sources */,
+				BF6067391F162A0700935E17 /* Animation.cpp in Sources */,
+				BF6067381F162A0700935E17 /* AnimatedSprite.cpp in Sources */,
 				74D9A7171F0C34F700D369FE /* SoldierFactory.cpp in Sources */,
 				74D9A71A1F0D17F100D369FE /* Siege.cpp in Sources */,
 			);

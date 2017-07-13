@@ -44,3 +44,4 @@ std::string Character::Soldier::getName(){
 void Character::Soldier::setName(std::string& name){
     this->name = name;
 }
+

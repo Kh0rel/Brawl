@@ -9,8 +9,7 @@
 #ifndef SoldierFactory_hpp
 #define SoldierFactory_hpp
 
-#include <stdio.h>
-#include <string>
+//#include <string>
 #include "AbstractUnitFactory.hpp"
 #include "Soldier.hpp"
 
@@ -19,6 +18,7 @@ class SoldierFactory : public AbstractUnitFactory
 {
 public:
     virtual Character::Unit* createUnit() override;
+    Character::Soldier* createSoldier();
 };
 }
 #endif /* SoldierFactory_hpp */

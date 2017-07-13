@@ -9,7 +9,6 @@
 #ifndef AbstractUnitFactory_hpp
 #define AbstractUnitFactory_hpp
 
-#include <stdio.h>
 #include "Unit.hpp"
 
 namespace Factory {

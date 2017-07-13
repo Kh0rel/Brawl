@@ -19,9 +19,7 @@
 
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
-#include "Animation.hpp"
-#include "AnimatedSprite.hpp"
-#include <iostream>
+#include "SoldierFactory.hpp"
 
 int main(int, char const**)
 {
@@ -30,48 +28,12 @@ int main(int, char const**)
     sf::RenderWindow window(sf::VideoMode(screenDimensions.x, screenDimensions.y), "Animations!");
     window.setFramerateLimit(60);
     
-    // load texture (spritesheet)
-    sf::Texture texture;
-    if (!texture.loadFromFile("/Users/Vincent/Documents/Pro/Cours/C++/project/Brawl/Brawl/Brawl/player.png"))
-    {
-        std::cout << "Failed to load player spritesheet!" << std::endl;
-        return 1;
-    }
     
-    // set up the animations for all four directions (set spritesheet and push frames)
-    Animation walkingAnimationDown;
-    walkingAnimationDown.setSpriteSheet(texture);
-    walkingAnimationDown.addFrame(sf::IntRect(32, 0, 32, 32));
-    walkingAnimationDown.addFrame(sf::IntRect(64, 0, 32, 32));
-    walkingAnimationDown.addFrame(sf::IntRect(32, 0, 32, 32));
-    walkingAnimationDown.addFrame(sf::IntRect( 0, 0, 32, 32));
+    Character::Soldier* soldier;
+    Factory::SoldierFactory* soldierFactory = new Factory::SoldierFactory();
     
-    Animation walkingAnimationLeft;
-    walkingAnimationLeft.setSpriteSheet(texture);
-    walkingAnimationLeft.addFrame(sf::IntRect(32, 32, 32, 32));
-    walkingAnimationLeft.addFrame(sf::IntRect(64, 32, 32, 32));
-    walkingAnimationLeft.addFrame(sf::IntRect(32, 32, 32, 32));
-    walkingAnimationLeft.addFrame(sf::IntRect( 0, 32, 32, 32));
+    soldier = soldierFactory->createSoldier();
     
-    Animation walkingAnimationRight;
-    walkingAnimationRight.setSpriteSheet(texture);
-    walkingAnimationRight.addFrame(sf::IntRect(32, 64, 32, 32));
-    walkingAnimationRight.addFrame(sf::IntRect(64, 64, 32, 32));
-    walkingAnimationRight.addFrame(sf::IntRect(32, 64, 32, 32));
-    walkingAnimationRight.addFrame(sf::IntRect( 0, 64, 32, 32));
-    
-    Animation walkingAnimationUp;
-    walkingAnimationUp.setSpriteSheet(texture);
-    walkingAnimationUp.addFrame(sf::IntRect(32, 96, 32, 32));
-    walkingAnimationUp.addFrame(sf::IntRect(64, 96, 32, 32));
-    walkingAnimationUp.addFrame(sf::IntRect(32, 96, 32, 32));
-    walkingAnimationUp.addFrame(sf::IntRect( 0, 96, 32, 32));
-    
-    Animation* currentAnimation = &walkingAnimationDown;
-    
-    // set up AnimatedSprite
-    AnimatedSprite animatedSprite(sf::seconds(0.2), true, false);
-    animatedSprite.setPosition(sf::Vector2f(screenDimensions / 2));
     
     sf::Clock frameClock;
     
@@ -95,44 +57,46 @@ int main(int, char const**)
         sf::Vector2f movement(0.f, 0.f);
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         {
-            currentAnimation = &walkingAnimationUp;
+            soldier->setCurrentAnimation(soldier->getMoveUpAnimation());
             movement.y -= speed;
             noKeyWasPressed = false;
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
         {
-            currentAnimation = &walkingAnimationDown;
+            soldier->setCurrentAnimation(soldier->getMoveDownAnimation());
             movement.y += speed;
             noKeyWasPressed = false;
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         {
-            currentAnimation = &walkingAnimationLeft;
+            soldier->setCurrentAnimation(soldier->getMoveLeftAnimation());
             movement.x -= speed;
             noKeyWasPressed = false;
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
         {
-            currentAnimation = &walkingAnimationRight;
+            soldier->setCurrentAnimation(soldier->getMoveRightAnimation());
             movement.x += speed;
             noKeyWasPressed = false;
         }
-        animatedSprite.play(*currentAnimation);
-        animatedSprite.move(movement * frameTime.asSeconds());
+        //soldier->getAnimatedSprite().setAnimation(const Animation &animation)
+        Animation animation = soldier->getCurrentAnimation();
+        soldier->getAnimatedSprite().play(animation);
+        soldier->getAnimatedSprite().move(movement * frameTime.asSeconds());
         
         // if no key was pressed stop the animation
         if (noKeyWasPressed)
         {
-            animatedSprite.stop();
+             soldier->getAnimatedSprite().stop();
         }
         noKeyWasPressed = true;
         
         // update AnimatedSprite
-        animatedSprite.update(frameTime);
+         soldier->getAnimatedSprite().update(frameTime);
         
         // draw
         window.clear();
-        window.draw(animatedSprite);
+        window.draw(soldier->getAnimatedSprite());
         window.display();
     }
     

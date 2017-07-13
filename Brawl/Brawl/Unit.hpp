@@ -12,6 +12,9 @@
 #include <stdio.h>
 #include <iostream>
 #include "IStrategy.hpp"
+#include "Animation.hpp"
+#include "AnimatedSprite.hpp"
+
 
 namespace Character {
     class Unit {
@@ -26,6 +29,19 @@ namespace Character {
         virtual std::string getName() = 0;
         virtual void setName(std::string& name) = 0;
         void updateStrategy(Strategy::IStrategy& strategy);
+        void setAnimations(Animation moveLeftAnimation,Animation moveRightAnimation,Animation moveUpAnimation,Animation movingDownAnimation,Animation shootingAnimation,Animation dyingAnimation);
+        Animation getCurrentAnimation();
+        
+        Animation getMoveLeftAnimation();
+        Animation getMoveRightAnimation();
+        Animation getMoveUpAnimation();
+        Animation getMoveDownAnimation();
+        Animation getShootingAnimation();
+        Animation getDyingAnimation();
+
+        void setCurrentAnimation(Animation current);
+        AnimatedSprite getAnimatedSprite();
+        void setAnimatedSprite(AnimatedSprite current);
         ~Unit();
 
     protected:
@@ -36,6 +52,14 @@ namespace Character {
         std::string player;
         std::string name;
         Strategy::IStrategy* strategy;
+        Animation moveLeftAnimation;
+        Animation moveRightAnimation;
+        Animation moveUpAnimation;
+        Animation moveDownAnimation;
+        Animation shootingAnimation;
+        Animation dyingAnimation;
+        Animation currentAnimation;
+        AnimatedSprite animatedSprite;
 
 };
 }
