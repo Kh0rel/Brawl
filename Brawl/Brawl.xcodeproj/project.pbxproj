@@ -32,6 +32,8 @@
 		74D9A7471F0E962C00D369FE /* SiegeBuildingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D9A7451F0E962C00D369FE /* SiegeBuildingFactory.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
 		BF6067381F162A0700935E17 /* AnimatedSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF6067341F162A0700935E17 /* AnimatedSprite.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
 		BF6067391F162A0700935E17 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF6067361F162A0700935E17 /* Animation.cpp */; settings = {COMPILER_FLAGS = "-O0"; }; };
+		BF6D89C91F17C4CC00A219C8 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF6D89C71F17C4CC00A219C8 /* Game.cpp */; };
+		BF6D89CC1F17C57700A219C8 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF6D89CA1F17C57700A219C8 /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,10 @@
 		BF6067351F162A0700935E17 /* AnimatedSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimatedSprite.hpp; sourceTree = "<group>"; };
 		BF6067361F162A0700935E17 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
 		BF6067371F162A0700935E17 /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
+		BF6D89C71F17C4CC00A219C8 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		BF6D89C81F17C4CC00A219C8 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		BF6D89CA1F17C57700A219C8 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		BF6D89CB1F17C57700A219C8 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 		74930EB81F0A59B20032DF47 /* Brawl */ = {
 			isa = PBXGroup;
 			children = (
+				BF6D89C61F17C4B100A219C8 /* Game */,
 				BF6067401F162A5E00935E17 /* Animation */,
 				74D9A7321F0E745000D369FE /* Building */,
 				74D9A7251F0D827300D369FE /* Strategy */,
@@ -224,6 +231,17 @@
 			name = Animation;
 			sourceTree = "<group>";
 		};
+		BF6D89C61F17C4B100A219C8 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				BF6D89C71F17C4CC00A219C8 /* Game.cpp */,
+				BF6D89C81F17C4CC00A219C8 /* Game.hpp */,
+				BF6D89CA1F17C57700A219C8 /* Player.cpp */,
+				BF6D89CB1F17C57700A219C8 /* Player.hpp */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,6 +337,8 @@
 				74D9A72B1F0D834F00D369FE /* MovementStrategy.cpp in Sources */,
 				74D9A70A1F0BC77D00D369FE /* Unit.cpp in Sources */,
 				74D9A7411F0E958900D369FE /* SoldierBuildingFactory.cpp in Sources */,
+				BF6D89CC1F17C57700A219C8 /* Player.cpp in Sources */,
+				BF6D89C91F17C4CC00A219C8 /* Game.cpp in Sources */,
 				74D9A7441F0E960E00D369FE /* ArcherBuildingFactory.cpp in Sources */,
 				74930EBC1F0A59B20032DF47 /* ResourcePath.mm in Sources */,
 				74D9A7141F0C313500D369FE /* Archer.cpp in Sources */,

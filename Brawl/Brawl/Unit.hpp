@@ -38,7 +38,7 @@ namespace Character {
         Animation getMoveDownAnimation();
         Animation getShootingAnimation();
         Animation getDyingAnimation();
-
+        
         void setCurrentAnimation(Animation current);
         AnimatedSprite getAnimatedSprite();
         void setAnimatedSprite(AnimatedSprite current);

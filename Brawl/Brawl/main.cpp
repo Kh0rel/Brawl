@@ -19,6 +19,7 @@
 
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
+#include "Game.hpp"
 #include "SoldierFactory.hpp"
 
 int main(int, char const**)
@@ -29,16 +30,29 @@ int main(int, char const**)
     window.setFramerateLimit(60);
     
     
-    Character::Soldier* soldier;
+    Game::Game& game = Game::Game::Instance();
+    
+    
+    Character::Soldier* soldier,*soldier2;
     Factory::SoldierFactory* soldierFactory = new Factory::SoldierFactory();
     
     soldier = soldierFactory->createSoldier();
+    soldier2 = soldierFactory->createSoldier();
     
-    
+    game.addUnit(*soldier);
+    game.addUnit(*soldier2);
+
     sf::Clock frameClock;
     
+    AnimatedSprite animatedSprite(sf::seconds(0.2), true, false);
+    animatedSprite.setPosition(sf::Vector2f(0,screenDimensions.y/2));
+
+    AnimatedSprite animatedSprite2(sf::seconds(0.2), true, false);
+    animatedSprite2.setPosition(sf::Vector2f(screenDimensions.x, screenDimensions.y/2));
+
+    
     float speed = 80.f;
-    bool noKeyWasPressed = true;
+    bool noKeyWasPressed = false;
     
     while (window.isOpen())
     {
@@ -51,52 +65,46 @@ int main(int, char const**)
                 window.close();
         }
         
+        
         sf::Time frameTime = frameClock.restart();
         
         // if a key was pressed set the correct animation and move correctly
         sf::Vector2f movement(0.f, 0.f);
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-        {
-            soldier->setCurrentAnimation(soldier->getMoveUpAnimation());
-            movement.y -= speed;
-            noKeyWasPressed = false;
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-        {
-            soldier->setCurrentAnimation(soldier->getMoveDownAnimation());
-            movement.y += speed;
-            noKeyWasPressed = false;
-        }
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-        {
-            soldier->setCurrentAnimation(soldier->getMoveLeftAnimation());
-            movement.x -= speed;
-            noKeyWasPressed = false;
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-        {
-            soldier->setCurrentAnimation(soldier->getMoveRightAnimation());
-            movement.x += speed;
-            noKeyWasPressed = false;
-        }
-        //soldier->getAnimatedSprite().setAnimation(const Animation &animation)
-        Animation animation = soldier->getCurrentAnimation();
-        soldier->getAnimatedSprite().play(animation);
-        soldier->getAnimatedSprite().move(movement * frameTime.asSeconds());
+        sf::Vector2f movement2(0.f, 0.f);
+        
+        //soldier->execute();
+        //soldier2->execute();
+        
+        soldier->setCurrentAnimation(soldier->getMoveRightAnimation());
+        soldier2->setCurrentAnimation(soldier->getMoveLeftAnimation());
+        movement.x += speed;
+        movement2.x -= speed;
+        
+        
+        Animation anim = soldier->getCurrentAnimation();
+        Animation anim2 = soldier2->getCurrentAnimation();
+        
+        animatedSprite.play(anim);
+        animatedSprite.move(movement * frameTime.asSeconds());
+        
+        animatedSprite2.play(anim2);
+        animatedSprite2.move(movement2 * frameTime.asSeconds());
+        
         
         // if no key was pressed stop the animation
         if (noKeyWasPressed)
         {
-             soldier->getAnimatedSprite().stop();
+            animatedSprite.stop();
         }
-        noKeyWasPressed = true;
-        
+
         // update AnimatedSprite
-         soldier->getAnimatedSprite().update(frameTime);
+        animatedSprite.update(frameTime);
+        animatedSprite2.update(frameTime);
         
         // draw
         window.clear();
-        window.draw(soldier->getAnimatedSprite());
+        window.draw(animatedSprite);
+        window.draw(animatedSprite2);
         window.display();
     }
     

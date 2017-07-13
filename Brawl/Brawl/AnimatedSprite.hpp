@@ -30,7 +30,6 @@
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/System/Vector2.hpp>
 
-
 #include "Animation.hpp"
 
 class AnimatedSprite : public sf::Drawable, public sf::Transformable
@@ -68,5 +67,4 @@ private:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     
 };
-
 #endif // ANIMATEDSPRITE_INCLUDE
